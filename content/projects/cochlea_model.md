@@ -5,15 +5,15 @@ description: A simple cochlea model for sound to spikes conversion
 date: 2018
 technologies:
   - Python
+  - Cython
   - C/C++
-thumbnail: /images/projects/cochlea-model.png
+thumbnail: /images/projects/cochlea-model_thumbnail.webp
 gallery:
   - /images/projects/cochlea-model.png
 tags:
-  - Modelling
   - Signal Processing
 links:
   github: https://github.com/tinmarD/simplecochlea
-  live: https://yourportfolio.com
-details: The simplecochlea package is a basic cochlea model, designed during the M4 project, for the conversion of sound into spikes. 
+  doc: https://simplecochlea.readthedocs.io/en/latest/index.html
+details: The simplecochlea package is a basic cochlea model, designed during the M4 project, for the conversion of sound into spikes.
 ---

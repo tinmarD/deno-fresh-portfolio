@@ -6,7 +6,7 @@ date: 2017
 technologies:
   - Python
   - Scipy
-thumbnail: /images/projects/pysab_erp.png
+thumbnail: /images/projects/pysab_thumbnail.webp
 gallery:
   - /images/projects/pysab_erp.png
   - /images/projects/pysab_itpc.png
@@ -17,6 +17,6 @@ tags:
   - Data Viz
 links:
   github: https://github.com/tinmarD/pySAB
-  live: https://yourportfolio.com
+  doc: https://https://pysab.readthedocs.io/en/latest/
 details: pySAB was designed to analyse EEG recordings during the SAB experiment, which aims at ...
 ---

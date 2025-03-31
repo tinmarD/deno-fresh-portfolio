@@ -1,5 +1,6 @@
 import { useSignal } from "@preact/signals";
 import ProjectModal from "./ProjectModal.tsx";
+import ProjectsPage from "../routes/index.tsx";
 
 export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
   // State for modal visibility
@@ -27,113 +28,104 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
       </div>
 
       {/* Modal */}
-      <ProjectModal isOpen={isModalOpen.value} onClose={() => (isModalOpen.value = false)}>
-        <div>
-          {/* Modal Content */}
-          <h2 class="text-2xl font-bold mb-4">{project.title}</h2>
-          <p class="text-gray-600 mb-4">{project.description}</p>
-          <div class="flex flex-wrap gap-2 mb-4"> A
-            {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
+      <ProjectModal
+        isOpen={isModalOpen.value}
+        onClose={() => (isModalOpen.value = false)}
+      >
+        <div class="max-w-3xl mx-auto px-4 py-8 text-center space-y-6">
+          {/* Thumbnail */}
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            class="mx-auto h-40 object-contain"
+          />
+
+          <div>
+            <h1 class="text-3xl font-semibold">{project.title}</h1>
+            <p class="text-gray-500">{project.description}</p>
           </div>
-          <div class="flex gap-4">
-            {project.links?.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                GitHub
-              </a>
+
+          <div class="text-left text-gray-700 space-y-4">
+            <h2 class="text-lg font-medium">Description</h2>
+            <hr />
+            <div class="space-y-2">{project.details}</div>
+          </div>
+
+          <img
+            src={project.gallery[0]}
+            alt={project.title}
+            class="mx-auto h-60 object-contain"
+          />
+
+          {/* Technologies */}
+          <div class="flex items-center space-x-2 text-left text-gray-700">
+            <h2 class="text-lg font-medium">Technologies :</h2>
+            <div class="flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          <hr />
+
+          {
+            /* <h2 class="text-left text-lg font-medium">Read more</h2>
+          <hr /> */
+          }
+
+          <div class="mt-6 text-sm text-gray-600">
+            {project.links.github && (
+              <>
+                The source code of the project is on{" "}
+                <a href={project.links.github} class="text-blue-600 underline">
+                  Github
+                </a>
+                .{" "}
+              </>
             )}
-            {project.links?.live && (
-              <a
-                href={project.links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                Live Site
-              </a>
+            {project.links.doc && (
+              <>
+                The documentation is available{" "}
+                <a href={project.links.doc} class="text-blue-600 underline">
+                  online
+                </a>
+              </>
             )}
+
+            <div class="mt-3 space-x-2">
+              {project.links.app && (
+                <a
+                  href={project.links.app}
+                  class="inline-block px-3 py-1 bg-green-100 border rounded"
+                >
+                  ONLINE APP
+                </a>
+              )}
+              {project.links.github && (
+                <a
+                  href={project.links.github}
+                  class="inline-block px-3 py-1 bg-blue-100 border rounded"
+                >
+                  GITHUB
+                </a>
+              )}
+              {project.links.doc && (
+                <a
+                  href={project.links.doc}
+                  class="inline-block px-3 py-1 bg-green-100 border rounded"
+                >
+                  DOCS
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </ProjectModal>
     </div>
   );
 }
-// export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
-//   return (
-//     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-//       {/* Thumbnail */}
-//       <img
-//         src={project.thumbnail}
-//         alt={`${project.title} thumbnail`}
-//         class="w-full h-48 object-cover"
-//       />
-
-//       {/* Project Info */}
-//       <div class="p-4 space-y-4">
-//         {/* Title */}
-//         <h3 class="text-xl font-semibold text-gray-800">
-//           <a
-//             href={`/projects/${project.slug}`}
-//             class="hover:underline text-blue-600"
-//           >
-//             {project.title}
-//           </a>
-//         </h3>
-
-//         {/* Description */}
-//         <p class="text-gray-600 text-sm">{project.description}</p>
-
-//         {/* Technologies */}
-//         <div class="flex flex-wrap gap-2">
-//           {project.technologies.map((tech) => (
-//             <span
-//               key={tech}
-//               class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full"
-//             >
-//               {tech}
-//             </span>
-//           ))}
-//         </div>
-
-//         {/* Links */}
-//         <div class="flex gap-4 mt-4">
-//           {project.links?.github && (
-//             <a
-//               href={project.links.github}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               class="text-gray-800 hover:text-gray-600 transition"
-//             >
-//               <span class="inline-block bg-gray-200 px-4 py-2 rounded-lg shadow hover:bg-gray-300">
-//                 GitHub
-//               </span>
-//             </a>
-//           )}
-//           {project.links?.live && (
-//             <a
-//               href={project.links.live}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               class="text-blue-600 hover:text-blue-500 transition"
-//             >
-//               <span class="inline-block bg-blue-100 px-4 py-2 rounded-lg shadow hover:bg-blue-200">
-//                 Live Site
-//               </span>
-//             </a>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

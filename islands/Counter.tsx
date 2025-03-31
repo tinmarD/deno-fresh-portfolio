@@ -14,4 +14,3 @@ export default function Counter(props: CounterProps) {
     </div>
   );
 }
- 

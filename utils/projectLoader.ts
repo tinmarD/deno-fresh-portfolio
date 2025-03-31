@@ -5,6 +5,7 @@ export interface ProjectFrontmatter {
   title: string;
   slug: string;
   description: string;
+  details: string;
   date: string;
   technologies: string[];
   thumbnail: string;
@@ -22,17 +23,17 @@ export interface ProjectContent extends ProjectFrontmatter {
 
 export async function loadProjects(): Promise<ProjectContent[]> {
   const projects: ProjectContent[] = [];
-  
+
   // Read projects from the content directory
   for await (const dirEntry of Deno.readDir("./content/projects")) {
     if (dirEntry.isFile && dirEntry.name.endsWith(".md")) {
       try {
         const filePath = `./content/projects/${dirEntry.name}`;
         const fileContent = await Deno.readTextFile(filePath);
-        
+
         // Extract frontmatter and markdown content
         const { attrs, body } = extract(fileContent);
-        
+
         projects.push({
           ...(attrs as ProjectFrontmatter),
           content: body,
@@ -44,16 +45,18 @@ export async function loadProjects(): Promise<ProjectContent[]> {
   }
 
   // Sort projects by date (most recent first)
-  return projects.sort((a, b) => 
+  return projects.sort((a, b) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }
 
 import { marked } from "https://esm.sh/marked@4.3.0";
 
-export async function loadProjectBySlug(slug: string): Promise<ProjectContent | null> {
+export async function loadProjectBySlug(
+  slug: string,
+): Promise<ProjectContent | null> {
   const projects = await loadProjects();
-  const project = projects.find(project => project.slug === slug) || null;
+  const project = projects.find((project) => project.slug === slug) || null;
 
   if (project) {
     // Convert markdown content to HTML

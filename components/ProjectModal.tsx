@@ -22,8 +22,8 @@ export default function Modal({
       >
         {/* Close Button */}
         <button
-          class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-          onClick={onClose} // Close modal when clicking the cross
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl font-bold p-2"
+          onClick={onClose}
         >
           ✕
         </button>

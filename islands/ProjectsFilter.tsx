@@ -2,20 +2,20 @@ import { useSignal } from "@preact/signals";
 import { ProjectContent } from "../utils/projectLoader.ts";
 import { ProjectCard } from "../components/ProjectCard.tsx";
 
-export default function ProjectsFilter({ projects }: { projects: ProjectContent[] }) {
+export default function ProjectsFilter(
+  { projects }: { projects: ProjectContent[] },
+) {
   // State for the selected tag
   const selectedTag = useSignal<string | null>(null);
 
   // Get a list of unique tags
   const allTags = Array.from(
-    new Set(projects.flatMap((project) => project.tags))
+    new Set(projects.flatMap((project) => project.tags)),
   );
 
   // Filter projects based on the selected tag
   const filteredProjects = selectedTag.value
-    ? projects.filter((project) =>
-        project.tags.includes(selectedTag.value!)
-      )
+    ? projects.filter((project) => project.tags.includes(selectedTag.value!))
     : projects;
 
   return (
