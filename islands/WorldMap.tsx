@@ -40,9 +40,10 @@ export default function WorldMap({ lat, lng, zoom = 3 }: MapProps) {
       //     accessToken: 'your.mapbox.access.token'
       //   }).addTo(map);
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
-        map,
-      );
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        minZoom: 3, // Set your desired minimum zoom
+        maxZoom: 10, // Set your desired maximum zoom
+      }).addTo(map);
 
       L.marker([lat, lng]).addTo(map)
         .openPopup();

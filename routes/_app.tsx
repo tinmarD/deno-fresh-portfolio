@@ -27,6 +27,14 @@ export default function App({ Component }: PageProps) {
           crossorigin=""
         >
         </script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+        </script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+          integrity="sha384-M9C2nskGGqT6F/s5Ovw+V4SpoV4wlW0iNzpHPfQc5PusAmeqLbbKzE6Hwh1K3L1F"
+          crossorigin="anonymous"
+        >
+        </script>
       </head>
       <body>
         <Component />

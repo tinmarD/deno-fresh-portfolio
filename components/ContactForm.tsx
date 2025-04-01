@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <section class="w-full py-20 bg-white mt-32">
+    <section class="w-full py-20">
       <div class="max-w-4xl mx-auto ">
         <h1 class="text-4xl font-bold text-gray-800 mb- text-center mb-8">
           CONTACT ME

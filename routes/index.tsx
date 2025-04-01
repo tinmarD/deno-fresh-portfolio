@@ -3,9 +3,11 @@ import { loadProjects, ProjectContent } from "../utils/projectLoader.ts";
 import ProjectsFilter from "../islands/ProjectsFilter.tsx";
 import Hero from "../islands/Hero.tsx";
 import ContactForm from "../components/ContactForm.tsx";
-import HeaderBar from "../components/HeaderBar.tsx";
+import HeaderBar from "../islands/HeaderBar.tsx";
 import WorldMap from "../islands/WorldMap.tsx";
 import Footer from "../components/Footer.tsx";
+import Particles from "../islands/Particles.tsx";
+import Intro from "../components/Intro.tsx";
 
 export const handler: Handlers<ProjectContent[]> = {
   async GET(_, ctx) {
@@ -22,20 +24,23 @@ export default function ProjectsPage(
       <HeaderBar />
       {/* Hero Section */}
       <section id="home">
-        <Hero />
+        <div style="position: relative; background-color: white;">
+          {/* <div style={{ position: "relative", "backgroundColor": "black" }}> */}
+          <Particles />
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <Hero />
+          </div>
+        </div>
+      </section>
+
+      <section id="intro">
+        <Intro />
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio">
-        <div class="max-w-4xl mx-auto text-center mt-24">
-          <h1 class="text-4xl font-bold text-gray-800 mb-2">PORTFOLIO</h1>
-          <p class="text-gray-600 mb-10 mt-6">
-            A glimpse of the projects I've been working on
-          </p>
-
-          {/* Projects Filter (Island) */}
-          <ProjectsFilter projects={projects} />
-        </div>
+      <section id="portfolio" class="bg-white mt-24 pt-24 pb-24">
+        {/* Projects Filter (Island) */}
+        <ProjectsFilter projects={projects} />
       </section>
 
       <section id="contact">
@@ -46,6 +51,8 @@ export default function ProjectsPage(
       <section id="world-map">
         <WorldMap lat={43.6} lng={1.43333} zoom={3} />
       </section>
+
+      {/* <ThreeScene /> */}
 
       <Footer />
     </div>

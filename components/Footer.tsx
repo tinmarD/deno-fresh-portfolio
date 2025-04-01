@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <div class="bg-white">
+    <div class="bg-gray-200">
+      {/* <p>
+        Designed Inspired by <a href="https://www.yan-holtz.com/"> yan-holtz.com </a>
+      </p> */}
       <div class="flex justify-center gap-8 p-3">
         <a
           href="https://github.com/tinmarD"

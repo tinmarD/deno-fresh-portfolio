@@ -8,8 +8,11 @@ import * as $about from "./routes/about.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $projects from "./routes/projects.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $HeaderBar from "./islands/HeaderBar.tsx";
 import * as $Hero from "./islands/Hero.tsx";
+import * as $Particles from "./islands/Particles.tsx";
 import * as $ProjectsFilter from "./islands/ProjectsFilter.tsx";
+import * as $ThreeScene from "./islands/ThreeScene.tsx";
 import * as $WorldMap from "./islands/WorldMap.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -23,8 +26,11 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/HeaderBar.tsx": $HeaderBar,
     "./islands/Hero.tsx": $Hero,
+    "./islands/Particles.tsx": $Particles,
     "./islands/ProjectsFilter.tsx": $ProjectsFilter,
+    "./islands/ThreeScene.tsx": $ThreeScene,
     "./islands/WorldMap.tsx": $WorldMap,
   },
   baseUrl: import.meta.url,

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section class="w-full text-center py-20 bg-white">
+    <section class="w-full text-center py-20">
       {/* Logo and Name */}
       <div class="flex justify-center items-center gap-4 mb-6">
         <span class="text-3xl font-bold">Tinmar</span>
@@ -47,7 +47,7 @@ export default function Hero() {
       {/* Buttons */}
       <div class="mt-8 flex justify-center gap-4">
         <a
-          href="#"
+          href="#contact"
           class="border border-teal-600 text-teal-600 px-6 py-2 rounded hover:bg-teal-600 hover:text-white"
         >
           CONTACT

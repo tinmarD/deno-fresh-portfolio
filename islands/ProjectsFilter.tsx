@@ -20,43 +20,50 @@ export default function ProjectsFilter(
 
   return (
     <div>
-      {/* Filter Controls */}
-      <div class="flex flex-wrap gap-4 mb-8">
-        {/* "Show All" Button */}
-        <button
-          type="button"
-          class={`px-4 py-2 rounded ${
-            selectedTag.value === null
-              ? "bg-gray-800 text-white"
-              : "border border-gray-300 hover:bg-gray-100"
-          }`}
-          onClick={() => (selectedTag.value = null)}
-        >
-          Show All
-        </button>
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">PORTFOLIO</h1>
+        <p class="text-gray-600 mb-10 mt-6">
+          A glimpse of the projects I've been working on
+        </p>
 
-        {/* Buttons for Each Tag */}
-        {allTags.map((tag) => (
+        {/* Filter Controls */}
+        <div class="flex flex-wrap gap-4 mb-8">
+          {/* "Show All" Button */}
           <button
-            key={tag}
             type="button"
             class={`px-4 py-2 rounded ${
-              selectedTag.value === tag
+              selectedTag.value === null
                 ? "bg-gray-800 text-white"
-                : "border border-gray-300 hover:bg-gray-100"
+                : "border border-gray-300 hover:bg-gray-600 hover:text-white"
             }`}
-            onClick={() => (selectedTag.value = tag)}
+            onClick={() => (selectedTag.value = null)}
           >
-            {tag}
+            Show All
           </button>
-        ))}
-      </div>
 
-      {/* Projects Grid */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
+          {/* Buttons for Each Tag */}
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              class={`px-4 py-2 rounded ${
+                selectedTag.value === tag
+                  ? "bg-gray-800 text-white"
+                  : "border border-gray-300 hover:bg-gray-600 hover:text-white"
+              }`}
+              onClick={() => (selectedTag.value = tag)}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );

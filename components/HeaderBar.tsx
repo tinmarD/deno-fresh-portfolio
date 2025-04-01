@@ -1,6 +1,6 @@
 export default function HeaderBar() {
   return (
-    <header class="fixed top-0 left-0 right-0 bg-white z-50">
+    <header class="fixed top-0 left-0 right-0  z-50">
       <nav class="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
         <div class="text-2xl">
           <a href="#home" class="hover:text-teal-600">
@@ -14,7 +14,10 @@ export default function HeaderBar() {
             </a>
           </li>
           <li>
-            <a href="#contact" class="hover:text-teal-600">
+            <a
+              href="#contact"
+              class="hover:text-teal-600; background-color: white;"
+            >
               CONTACT
             </a>
           </li>
