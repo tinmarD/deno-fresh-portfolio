@@ -13,6 +13,7 @@ import * as $Hero from "./islands/Hero.tsx";
 import * as $Particles from "./islands/Particles.tsx";
 import * as $ProjectsFilter from "./islands/ProjectsFilter.tsx";
 import * as $ThreeScene from "./islands/ThreeScene.tsx";
+import * as $Timeline from "./islands/Timeline.tsx";
 import * as $WorldMap from "./islands/WorldMap.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -31,6 +32,7 @@ const manifest = {
     "./islands/Particles.tsx": $Particles,
     "./islands/ProjectsFilter.tsx": $ProjectsFilter,
     "./islands/ThreeScene.tsx": $ThreeScene,
+    "./islands/Timeline.tsx": $Timeline,
     "./islands/WorldMap.tsx": $WorldMap,
   },
   baseUrl: import.meta.url,

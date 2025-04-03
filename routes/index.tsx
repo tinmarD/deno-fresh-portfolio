@@ -8,6 +8,7 @@ import WorldMap from "../islands/WorldMap.tsx";
 import Footer from "../components/Footer.tsx";
 import Particles from "../islands/Particles.tsx";
 import Intro from "../components/Intro.tsx";
+import Timeline from "../islands/Timeline.tsx";
 
 export const handler: Handlers<ProjectContent[]> = {
   async GET(_, ctx) {
@@ -35,6 +36,7 @@ export default function ProjectsPage(
 
       <section id="intro">
         <Intro />
+        <Timeline />
       </section>
 
       {/* Portfolio Section */}

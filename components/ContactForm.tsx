@@ -5,7 +5,7 @@ export default function ContactForm() {
         <h1 class="text-4xl font-bold text-gray-800 mb- text-center mb-8">
           CONTACT ME
         </h1>
-        <p class="text-gray-600 text-center mb-10 mt-6">
+        <p class="text-gray-600 italic text-center mb-10 mt-6">
           Feel free to contact me for any question.
         </p>
         <form

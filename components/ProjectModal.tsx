@@ -17,11 +17,12 @@ export default function Modal({
       onClick={onClose} // Close modal when clicking outside the content
     >
       <div
-        class="bg-white rounded-lg shadow-lg w-11/12 max-w-2xl p-6 relative"
+        class="bg-white rounded-lg shadow-lg w-11/12 max-w-2xl p-6 relative animate-fade-in-zoom"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal content
       >
         {/* Close Button */}
         <button
+          type="button"
           class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl font-bold p-2"
           onClick={onClose}
         >
