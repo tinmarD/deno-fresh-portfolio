@@ -2,10 +2,11 @@ import { useEffect, useState } from "preact/hooks";
 
 export default function HeaderBar() {
   const [opacity, setOpacity] = useState(0);
+  const [activeSection, setActiveSection] = useState("home");
 
+  // Fade in header based on scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Adjust the divisor (e.g., 100) to control how fast opacity reaches 1.
       const newOpacity = Math.min(globalThis.scrollY / 100, 1);
       setOpacity(newOpacity);
     };
@@ -13,6 +14,55 @@ export default function HeaderBar() {
     globalThis.addEventListener("scroll", handleScroll);
     return () => globalThis.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Update active section using IntersectionObserver
+  useEffect(() => {
+    // List of section ids corresponding to each nav link
+    const sectionIds = ["home", "intro", "portfolio", "contact"];
+    const observerOptions = {
+      threshold: 0.6,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target.id) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
+  const navItem = (id: string, label: string) => (
+    <li class="relative">
+      <a href={`#${id}`} class="hover:text-teal-600">
+        {label}
+      </a>
+      {activeSection === id && (
+        <span class="absolute -bottom-4 -left-4 -right-4 h-1 bg-gray-300" />
+      )}
+    </li>
+  );
 
   return (
     <header
@@ -26,21 +76,9 @@ export default function HeaderBar() {
           </a>
         </div>
         <ul class="flex space-x-6">
-          <li>
-            <a href="#intro" class="hover:text-teal-600">
-              INTRO
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" class="hover:text-teal-600">
-              PORTFOLIO
-            </a>
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-teal-600">
-              CONTACT
-            </a>
-          </li>
+          {navItem("intro", "INTRO")}
+          {navItem("portfolio", "PORTFOLIO")}
+          {navItem("contact", "CONTACT")}
         </ul>
       </nav>
     </header>

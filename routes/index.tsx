@@ -34,7 +34,7 @@ export default function ProjectsPage(
         </div>
       </section>
 
-      <section id="intro">
+      <section id="intro" class="pt-4 pb-8">
         <Intro />
         <Timeline />
       </section>

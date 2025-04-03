@@ -15,6 +15,6 @@ tags:
   - UI Design
 links:
   github: https://github.com/tinmarD/deno-fresh-portfolio
-  doc: 
+  doc:
 details: This website was designed using Typescript and Deno with fresh. MOKOK
 ---

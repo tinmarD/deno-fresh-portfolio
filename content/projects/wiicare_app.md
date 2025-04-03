@@ -19,5 +19,5 @@ tags:
 links:
   - github:
   - doc:
-details: The wiiCare App is a smartphone application used for monitoring the status of wiiCare sensors deployed in one's care home. An alert detected by the sensor triggers a notification on the application. A 3D visualisation of the alert is done using three.js. 
+details: The wiiCare App is a smartphone application used for monitoring the status of wiiCare sensors deployed in one's care home. An alert detected by the sensor triggers a notification on the application. A 3D visualisation of the alert is done using three.js.
 ---

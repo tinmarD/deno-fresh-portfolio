@@ -1,7 +1,7 @@
 ---
 title: Vision AI
 slug: vision AI
-description: HPE, Detection and more 
+description: HPE, Detection and more
 date: 2023
 technologies:
   - Python

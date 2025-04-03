@@ -75,15 +75,17 @@ export default function HorizontalTimeline() {
           <div className="flex justify-between">
             {timelineEvents.map((event) => (
               <div key={event.id} className="flex flex-col items-center">
-                    <div
-                  onClick={() => setActiveEvent(event.id)}
+                <div
+                  onClick={() =>
+                    setActiveEvent(event.id)}
                   className={`w-8 h-8 rounded-full z-10 transition-all mt-1 duration-300 bg-gray-400`}
                 />
-                {/* <button
+                {
+                  /* <button
                   type="button"
                   onClick={() =>
                     setActiveEvent(event.id)}
-                  className={`w-10 h-10 rounded-full z-10 flex items-center justify-center transition-all duration-300 
+                  className={`w-10 h-10 rounded-full z-10 flex items-center justify-center transition-all duration-300
                   ${
                     activeEvent === event.id
                       ? "bg-blue-600 text-white"
@@ -91,7 +93,8 @@ export default function HorizontalTimeline() {
                   }`}
                 >
                   {event.id}
-                </button> */}
+                </button> */
+                }
                 <div className="mt-2 text-sm font-medium">{event.date}</div>
               </div>
             ))}
@@ -137,9 +140,8 @@ export default function HorizontalTimeline() {
                 }}
               >
                 <div
-                  className={`text-xs font-medium italic text-gray-700 px-2 py-1 rounded bg-gray-100 ${
-                    text.position = "mt-6"
-                  }`}
+                  className={`text-xs font-medium italic text-gray-700 px-2 py-1 rounded bg-gray-100 ${text
+                    .position = "mt-6"}`}
                 >
                   {text.text}
                 </div>
@@ -150,7 +152,8 @@ export default function HorizontalTimeline() {
         </div>
 
         {/* Content for the active event */}
-        {/* {timelineEvents.map((event) => (
+        {
+          /* {timelineEvents.map((event) => (
           <div
             key={event.id}
             className={`transition-opacity duration-300 ${
@@ -162,7 +165,8 @@ export default function HorizontalTimeline() {
               <p className="text-gray-600 mt-2">{event.description}</p>
             </div>
           </div>
-        ))} */}
+        ))} */
+        }
       </div>
     </div>
   );
