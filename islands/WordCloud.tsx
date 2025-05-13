@@ -24,14 +24,14 @@ export default function WordCloud(props: WordCloudProps) {
         // Fetch CSV data directly from the static folder
         const response = await fetch(csvPath);
         const csvText = await response.text();
-
+        
         // Parse CSV data
         const words: Word[] = d3.csvParse(csvText, (d) => {
           return {
-            text: d.word || "", // Assuming 'word' is the column name in CSV
-            value: +d.count || 0, // Assuming 'count' is the column name in CSV
+            text: d.word || "",  // Assuming 'word' is the column name in CSV
+            value: +d.count || 0 // Assuming 'count' is the column name in CSV
           };
-        }).filter((d) => d.text && d.value > 0);
+        }).filter(d => d.text && d.value > 0);
 
         if (!words.length) {
           console.error("No valid words found in CSV");
@@ -53,21 +53,14 @@ export default function WordCloud(props: WordCloudProps) {
           .padding(5)
           .rotate(() => ~~(Math.random() * 2) * 90)
           .font("Impact")
-          .fontSize((d) => Math.sqrt(d.value) * 10)
+          .fontSize(d => Math.sqrt(d.value) * 10)
           .on("end", draw);
 
         // Start layout calculation
         layout.start();
 
         // Function to draw the word cloud
-        interface WordWithLayout extends Word {
-          x: number;
-          y: number;
-          size: number;
-          rotate: number;
-        }
-
-        function draw(words: WordWithLayout[]) {
+        function draw(words: any[]) {
           d3.select(svgRef.current)
             .attr("width", width)
             .attr("height", height)
@@ -77,15 +70,12 @@ export default function WordCloud(props: WordCloudProps) {
             .data(words)
             .enter()
             .append("text")
-            .style("font-size", (d: WordWithLayout) => `${d.size}px`)
+            .style("font-size", d => `${d.size}px`)
             .style("font-family", "Impact")
-            .style("fill", (_: WordWithLayout, i: number) => color(i.toString()))
+            .style("fill", (_, i) => color(i.toString()))
             .attr("text-anchor", "middle")
-            .attr(
-              "transform",
-              (d: WordWithLayout) => `translate(${d.x},${d.y}) rotate(${d.rotate})`,
-            )
-            .text((d: WordWithLayout) => d.text);
+            .attr("transform", d => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
+            .text(d => d.text);
         }
       } catch (error) {
         console.error("Error loading or rendering word cloud:", error);
@@ -97,6 +87,7 @@ export default function WordCloud(props: WordCloudProps) {
 
   return (
     <div className="word-cloud-container">
+      <p> MOKOKO </p>
       <svg ref={svgRef}></svg>
     </div>
   );

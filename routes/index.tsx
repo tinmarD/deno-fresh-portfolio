@@ -9,6 +9,7 @@ import Footer from "../components/Footer.tsx";
 import Particles from "../islands/Particles.tsx";
 import Intro from "../components/Intro.tsx";
 import Timeline from "../islands/Timeline.tsx";
+import WordCloud from "../islands/WordCloud.tsx";
 
 export const handler: Handlers<ProjectContent[]> = {
   async GET(_, ctx) {
@@ -16,6 +17,7 @@ export const handler: Handlers<ProjectContent[]> = {
     return ctx.render(projects);
   },
 };
+
 
 export default function ProjectsPage(
   { data: projects }: PageProps<ProjectContent[]>,
@@ -38,6 +40,12 @@ export default function ProjectsPage(
         <Intro />
         <Timeline />
       </section>
+
+      {/* <WordCloud 
+            width={800} 
+            height={600} 
+            csvPath="./content/skills/words.csv" 
+          /> */}
 
       {/* Portfolio Section */}
       <section id="portfolio" class="bg-white mt-24 pt-24 pb-24">
