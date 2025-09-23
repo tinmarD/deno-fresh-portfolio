@@ -38,10 +38,9 @@ export default function Hero() {
 
       {/* Intro Text */}
       <p class="max-w-2xl mx-auto text-lg leading-relaxed">
-        👋 Hi! I'm a freelance <strong>senior software engineer</strong>{" "}
-        specializing in
-        <strong>data visualization</strong>. I worked for prestigious research
-        centers and top-tier companies. Blablabla.
+        Bonjour ! I'm a freelance <strong>senior Data Scientist</strong>{" "}
+        with expertise in <strong>machine and deep learning</strong>, <strong> computer vision</strong>, and{" "}
+        <strong>signal processing</strong>. I’ve had the opportunity to work with prestigious research centers as well as innovative startups.
       </p>
 
       {/* Buttons */}

@@ -11,6 +11,34 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Axis styling */
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+  stroke: white;
+}
+
+.x-axis text,
+.y-axis text {
+  fill: grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Axis labels */
+.axis-label {
+  fill: #aaaaaa;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.citation-line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
+
 /* @keyframes fadeInZoom {
   from {
     opacity: 0;

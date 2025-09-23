@@ -6,11 +6,13 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $CitationChart from "./islands/CitationChart.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $HeaderBar from "./islands/HeaderBar.tsx";
 import * as $Hero from "./islands/Hero.tsx";
 import * as $Particles from "./islands/Particles.tsx";
 import * as $ProjectsFilter from "./islands/ProjectsFilter.tsx";
+import * as $TestimonialCarousel from "./islands/TestimonialCarousel.tsx";
 import * as $ThreeScene from "./islands/ThreeScene.tsx";
 import * as $Timeline from "./islands/Timeline.tsx";
 import * as $WordCloud from "./islands/WordCloud.tsx";
@@ -25,11 +27,13 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/CitationChart.tsx": $CitationChart,
     "./islands/Counter.tsx": $Counter,
     "./islands/HeaderBar.tsx": $HeaderBar,
     "./islands/Hero.tsx": $Hero,
     "./islands/Particles.tsx": $Particles,
     "./islands/ProjectsFilter.tsx": $ProjectsFilter,
+    "./islands/TestimonialCarousel.tsx": $TestimonialCarousel,
     "./islands/ThreeScene.tsx": $ThreeScene,
     "./islands/Timeline.tsx": $Timeline,
     "./islands/WordCloud.tsx": $WordCloud,

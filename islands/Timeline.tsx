@@ -39,14 +39,14 @@ export default function HorizontalTimeline() {
       position: "top",
     },
     {
-      text: "Freelance Software Dev",
+      text: "Data Scientist freelance",
       position: "top",
     },
   ];
 
   const betweenTextsBottom = [
     {
-      text: "CNRS UMR5549 CerCo",
+      text: "CNRS CerCo",
       position: "bottom",
     },
     {

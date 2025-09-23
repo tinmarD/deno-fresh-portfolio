@@ -14,15 +14,16 @@ export default function Intro() {
         <div class="md:w-2/3">
           {/* <h2 class="text-2xl font-bold mb-4">Your Title Here</h2> */}
           <p class="text-gray-700">
-            This is your text description. Add any details you'd like to share
-            about yourself or the content related to the photo. This is your
-            text description. Add any details you'd like to share about yourself
-            or the content related to the photo. This is your text description.
-            Add any details you'd like to share about yourself or the content
-            related to the photo. This is your text description. Add any details
-            you'd like to share about yourself or the content related to the
-            photo.
+            My research background at CNRS focused on EEG signal analysis, applying machine learning for epilepsy detection, and developing user 
+            interfaces to assist practitioners. Another project explored modeling brain learning mechanisms through spiking neural networks and unsupervised learning.
           </p>
+
+          <p class="text-gray-700 mt-4">
+            More recently, I have worked on intelligent sensor systems for healthcare, developing fall detection algorithms and optimizing AI models
+            for embedded hardware. In parallel, I managed the monitoring and deployment platforms supporting these systems, and developed web 
+            and mobile applications for tracking fall events and related alerts.
+          </p>
+
           <div class="mt-8 flex  gap-4">
             <a
               href="https://github.com/tinmarD"

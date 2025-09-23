@@ -8,7 +8,6 @@ AI/MLOPs, OpenMMLAB
 AI/MLOPs, OpenVINO
 AI/MLOPs, PyTorch
 AI/MLOPs, Tensorflow
-AI/MLOPs, ollama
 Developpment, Python
 Developpment, Javascript/Typescript
 Developpment, React
@@ -17,8 +16,10 @@ Developpment, NodeJS
 Developpment, Django
 Developpment, Flask
 Developpment, streamlit
-Devops, CI/CD
 Devops, Github Actions
 Devops, Docker
 Devops, GCP
 Devops, AWS
+Embedded Systems, Yocto
+Data-Viz, d3.js
+Data-Viz, three.js

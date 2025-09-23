@@ -69,7 +69,7 @@ export default function HeaderBar() {
       class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
       style={`background-color: rgba(255, 255, 255, ${opacity});`}
     >
-      <nav class="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
+      <nav class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
         <div class="text-2xl">
           <a href="#home" class="hover:text-teal-600">
             HOME
@@ -78,6 +78,8 @@ export default function HeaderBar() {
         <ul class="flex space-x-6">
           {navItem("intro", "INTRO")}
           {navItem("portfolio", "PORTFOLIO")}
+          {navItem("citations-graph", "ACADEMIC")}
+          {navItem("testimonials", "TESTIMONIALS")}
           {navItem("contact", "CONTACT")}
         </ul>
       </nav>
