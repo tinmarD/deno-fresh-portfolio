@@ -3,7 +3,7 @@ export default function Hero() {
     <section class="w-full text-center py-20">
       {/* Logo and Name */}
       <div class="flex justify-center items-center gap-4 mb-6">
-        <span class="text-3xl font-bold">Tinmar</span>
+        <span class="text-3xl font-bold">Martin</span>
         <div class="border-2 border-black rounded-full w-16 h-16 flex items-center justify-center">
           <span class="text-xl font-bold">⚡</span>
         </div>

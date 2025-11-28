@@ -81,7 +81,8 @@ export default function SkillsSection() {
           {categories.map((category) => (
             <div 
               key={category.title} 
-              class="bg-white dark:bg-gray-700 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              class="bg-white/90 dark:bg-gray-800/85 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 backdrop-blur-sm"
+              // class="bg-white dark:bg-gray-700 bg-opacity-25 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               {/* Header */}
               <div class={`px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center gap-3 bg-${category.color}-50 dark:bg-opacity-10`}>
