@@ -102,7 +102,7 @@ export default function ProjectsPage(
         </div>
       </section>
       
-      <section id="world-map">
+      <section id="world-map" class="bg-gray-100">
         <WorldMap lat={43.6} lng={1.43333} zoom={3} />
       </section>
 

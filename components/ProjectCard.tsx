@@ -82,7 +82,7 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
             {project.links.github && (
               <>
                 The source code of the project is on{" "}
-                <a href={project.links.github} class="text-blue-600 underline">
+                <a href={project.links.github} class="text-blue-600 underline" rel="noopener noreferrer" target="_blank">
                   Github
                 </a>
                 .{" "}
@@ -91,7 +91,7 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
             {project.links.doc && (
               <>
                 The documentation is available{" "}
-                <a href={project.links.doc} class="text-blue-600 underline">
+                <a href={project.links.doc} class="text-blue-600 underline" rel="noopener noreferrer" target="_blank">
                   online
                 </a>
               </>
@@ -101,7 +101,7 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
               {project.links.app && (
                 <a
                   href={project.links.app}
-                  class="inline-block px-3 py-1 bg-green-100 border rounded"
+                  class="inline-block px-3 py-1 bg-green-100 border rounded" rel="noopener noreferrer" target="_blank"
                 >
                   ONLINE APP
                 </a>
@@ -109,7 +109,7 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
               {project.links.github && (
                 <a
                   href={project.links.github}
-                  class="inline-block px-3 py-1 bg-blue-100 border rounded"
+                  class="inline-block px-3 py-1 bg-blue-100 border rounded" rel="noopener noreferrer" target="_blank"
                 >
                   GITHUB
                 </a>
@@ -117,7 +117,7 @@ export function ProjectCard({ project }: { project: ProjectFrontmatter }) {
               {project.links.doc && (
                 <a
                   href={project.links.doc}
-                  class="inline-block px-3 py-1 bg-green-100 border rounded"
+                  class="inline-block px-3 py-1 bg-green-100 border rounded" rel="noopener noreferrer" target="_blank"
                 >
                   DOCS
                 </a>

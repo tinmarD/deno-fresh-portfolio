@@ -10,12 +10,16 @@ export default function Footer() {
         <a
           href="https://github.com/tinmarD"
           class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 h-10"
+          rel="noopener noreferrer" 
+          target="_blank"
         >
           <i class="fab fa-github" />
         </a>
         <a
           href="https://www.linkedin.com/in/martin-deudon-122a1130/"
           class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 h-10 "
+          rel="noopener noreferrer" 
+          target="_blank"
         >
           <i class="fab fa-linkedin-in" />
         </a>
