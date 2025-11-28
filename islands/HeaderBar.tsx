@@ -80,7 +80,7 @@ export default function HeaderBar() {
           {navItem("skills", "SKILLS")}
           {navItem("portfolio", "PORTFOLIO")}
           {navItem("citations-graph", "ACADEMIC")}
-          {navItem("testimonials", "TESTIMONIALS")}
+          {/* {navItem("testimonials", "TESTIMONIALS")} */}
           {navItem("contact", "CONTACT")}
         </ul>
       </nav>

@@ -87,12 +87,12 @@ export default function ProjectsPage(
         </div>
       </section>
 
-      <section id="testimonials" class="bg-white pt-24 pb-24">
+      {/* <section id="testimonials" class="bg-white pt-24 pb-24">
         <div class="max-w-4xl mx-auto text-center mb-10">
           <h1 class="text-4xl font-bold text-gray-900 mb-2">TESTIMONIALS</h1>
           <TestimonialCarousel testimonials={testimonials} />
         </div>
-      </section>
+      </section> */}
 
 
       <section id="contact" class="bg-gray-100">
