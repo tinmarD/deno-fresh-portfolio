@@ -62,7 +62,7 @@ export default function ProjectsPage(
         <Timeline />
       </section>
 
-      <section id="skills" class="bg-white pt-3 pb-8">
+      <section id="skills" class="bg-gray-100 pt-3 pb-8">
         <SkillsSection />  
       </section>
       {/* <WordCloud 

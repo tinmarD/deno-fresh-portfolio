@@ -66,13 +66,13 @@ export default function SkillsSection() {
   ];
 
   return (
-    <div class="py-12 bg-gray-50>">
+    <div class="py-12 bg-gray-50> bg-[url(/images/backgrounds/montagne2.webp)] bg-center bg-cover bg-gray-200 bg-blend-multiply">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-4xl font-bold text-gray-800 mb-2">
             TECHNICAL EXPERTISE
           </h2>
-          <p class="text-gray-600 mb-10 mt-6 italic">
+          <p class="text-white font-semibold mb-10 mt-6 italic">
             A comprehensive toolkit across the full stack and AI lifecycle.
           </p>
         </div>
