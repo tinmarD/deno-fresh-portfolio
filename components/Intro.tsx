@@ -7,7 +7,7 @@ export default function Intro() {
           <img
             src="/images/profil.jpg"
             alt="Profile Picture"
-            class="w-auto h-64"
+            class="w-auto h-72 rounded-md"
           />
         </div>
         {/* Text Description Section */}
@@ -27,21 +27,35 @@ export default function Intro() {
           <div class="mt-8 flex  gap-4">
             <a
               href="https://github.com/tinmarD"
+              rel="noopener noreferrer"
+              target="_blank"
               class="border border-teal-600 text-teal-600 px-6 py-2 rounded hover:bg-teal-600 hover:text-white"
             >
               GITHUB
             </a>
             <a
-              href="https://www.linkedin.com/in/martin-deudon-122a1130/b.com/tinmarD"
+              href="https://www.linkedin.com/in/martin-deudon-122a1130"
+              rel="noopener noreferrer"
+              target="_blank"
               class="border border-teal-600 text-teal-600 px-6 py-2 rounded hover:bg-teal-600 hover:text-white"
             >
               LINKEDIN
             </a>
             <a
               href="https://scholar.google.fr/citations?user=3n9lLKMAAAAJ&hl=en"
+              rel="noopener noreferrer"
+              target="_blank"
               class="border border-teal-600 text-teal-600 px-6 py-2 rounded hover:bg-teal-600 hover:text-white"
             >
               PUBLICATIONS
+            </a>
+            <a
+               href="/CV_MartinDEUDON_en.pdf"
+               target="_blank"
+               rel="noopener noreferrer"
+              class="border border-teal-600 text-teal-600 px-6 py-2 rounded hover:bg-teal-600 hover:text-white"
+            >
+              CV
             </a>
           </div>
         </div>

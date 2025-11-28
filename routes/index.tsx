@@ -14,6 +14,7 @@ import CitationChart from "../islands/CitationChart.tsx";
 // import ThreeScene from "../islands/ThreeScene.tsx";
 import TestimonialCarousel from "../islands/TestimonialCarousel.tsx";
 import { citations } from "../content/citations.ts";
+import SkillsSection from "../components/SkillsSection.tsx";
 
 export const handler: Handlers<ProjectContent[]> = {
   async GET(_, ctx) {
@@ -61,6 +62,9 @@ export default function ProjectsPage(
         <Timeline />
       </section>
 
+      <section id="skills" class="bg-white pt-3 pb-8">
+        <SkillsSection />  
+      </section>
       {/* <WordCloud 
             width={800} 
             height={600} 
@@ -68,7 +72,7 @@ export default function ProjectsPage(
           /> */}
 
       {/* Portfolio Section */}
-      <section id="portfolio" class="bg-white mt-24 pt-24 pb-24">
+      <section id="portfolio" class="bg-gray-100 mt-24 pt-24 pb-24">
         {/* Projects Filter (Island) */}
         <ProjectsFilter projects={projects} />
       </section>

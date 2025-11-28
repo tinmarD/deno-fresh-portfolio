@@ -77,6 +77,7 @@ export default function HeaderBar() {
         </div>
         <ul class="flex space-x-6">
           {navItem("intro", "INTRO")}
+          {navItem("skills", "SKILLS")}
           {navItem("portfolio", "PORTFOLIO")}
           {navItem("citations-graph", "ACADEMIC")}
           {navItem("testimonials", "TESTIMONIALS")}
